@@ -39,25 +39,17 @@ th {
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>Productid</th>
-        <th>ProductName</th>
-        <th>ProductPrice</th>
-        <th>ProductCategory</th>
-        <th>Product Supplier</th>
-        <th>Image</th>
-        <th>showmoredetails</th>
+        
+        <th>Products</th>
       </tr>
     </thead>
     <tbody>
      <jscore:forEach items="${product}" var="p">
       <tr>
-        <td>${p.id}</td>
-        <td>${p.proname}</td>
-        <td>${p.proprice}</td>
-        <td>${p.procat}</td>
-        <td>${p.prosup}</td>
-   <td><img src="resources/${p.id }.jpg" width=75px;height=75px></td>
-        <td><a href="showmoredetails?id=${p.id}"><img src="resources/${p.id }.jpg" width=75px; height=75px></a></td>
+        <td><a href="showmoredetails?id=${p.id}"><img src="resources/${p.id }.jpg" width=75px; height=75px>        ${p.proname}
+        ${p.proprice}
+        ${p.procat}
+        ${p.prosup}</td>
       </tr>
       </jscore:forEach>
     </tbody>

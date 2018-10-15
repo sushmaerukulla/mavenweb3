@@ -36,7 +36,7 @@ SupplierDao supplierdao;
 	public ModelAndView m1()
 	{
 			
-			ModelAndView mv=new  ModelAndView("showproduct","prod",p1);
+			ModelAndView mv=new  ModelAndView("showproducts","prod",p1);
 			List proList=productdao.getAllProducts();
 			mv.addObject("product",proList);
 			List catList=categorydao.getAllCategory();
@@ -66,14 +66,14 @@ SupplierDao supplierdao;
 			
 			}
 				
-			return new ModelAndView("showproduct","product",proList);
+			return new ModelAndView("showproducts","product",proList);
 		}
 		@RequestMapping("/deletepro")
 		public ModelAndView delete(@RequestParam("id") int productId)
 		{
 			productdao.deleteProduct(productId);
 			List proList=productdao.getAllProducts();
-			ModelAndView mv=new ModelAndView("showproduct","prod",new Product());
+			ModelAndView mv=new ModelAndView("showproducts","prod",new Product());
 			mv.addObject("product",proList);
 			return mv;
 		}
@@ -82,7 +82,7 @@ SupplierDao supplierdao;
 		{
 			Product pro=productdao.editProduct(productId);
 			List proList=productdao.getAllProducts();
-			ModelAndView mv=new ModelAndView("showproduct","prod",pro);
+			ModelAndView mv=new ModelAndView("showproducts","prod",pro);
 			mv.addObject("product",proList);
 			return mv;
 		}

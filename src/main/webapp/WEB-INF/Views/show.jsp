@@ -16,14 +16,18 @@
 </head>
 <body>
 <div>
-
+<img src="resources/${product.id }.jpg">
 <p>${product.id}</p>
   ${product.proname}
   ${product.proprice}
-  <img src="resources/${product.id }.jpg">
+  <p>Select size:</p>
+  <input type="radio" value="small"  checked>Small
+<input type="radio" value="medium"  >Medium
+<input type="radio" value="large"  >Large
 <form action="addtocart">
 <input type="hidden" name="id" value="${product.id}">
 Quantity<input type="text" name="quantity">
+
 <input type="submit" value="Add to Cart">
 
 </form>

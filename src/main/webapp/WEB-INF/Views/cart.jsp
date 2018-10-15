@@ -16,6 +16,11 @@
   
 </head>
 <body>
+<style>
+p{
+font-size: 20px
+}
+</style>
 <div class="container" style="background-color:rgb(240, 240, 240)"; >
      
   <table class="table table-dark table-striped table-bordered">
@@ -40,12 +45,22 @@
         <td>${c.cartUser}</td>
         <td>${c.totalprice}</td>
   
-       
-      
-      </tr>
-      </jscore:forEach>
-    </tbody>
-  </table>
+       <jscore:set var="payableAmount" value="${payableAmount+c.totalprice}" />
+
+</jscore:forEach>
+<p>Total Amount to be paid=${payableAmount }</p>
+   </tbody>
+ </table>
+</div>
+<div class="col-sm-6">
+<form action="cancelorder" method="post">
+<input type="submit" value="CancelOrder">
+</form>
+</div>
+<div class="col-sm-6">
+<form action="" method="post">
+<input type="submit" value="ConfirmOrder">
+</form>
 </div>
 </body>
 </html>

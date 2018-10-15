@@ -17,7 +17,7 @@
     </div>
     <ul class="nav navbar-nav">
     
-      <li><a href="home.html">Product</a></li>
+      <li><a href="home1.html">Product</a></li>
       <li><a href="category.html">Category</a></li>
       <li><a href="supplier.html">Supplier</a></li>
       <li><a href="perform_logout">Logout</a></li>

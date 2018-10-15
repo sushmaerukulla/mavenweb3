@@ -1,5 +1,6 @@
 package com.sushma.web3.dao;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -54,5 +55,14 @@ cart.setCartUser(s);
 		
 	}
 	
-
+public BigInteger noOfRows(String cartuser)
+{
+	Session session=sessionFactory.openSession();
+	Query query= session.createSQLQuery("select count(*) from Cart where cartuser=:cu ");
+	 query.setParameter("cu",cartuser);
+	BigInteger y=(BigInteger)query.uniqueResult();
+	 session.close();
+	return y;
+	
+}
 }

@@ -1,5 +1,6 @@
 package com.sushma.web3.controller;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -41,9 +42,13 @@ public class CartController {
 	@RequestMapping("/cart1")
 	public ModelAndView show()
 	{
-		String s=(String)session.getAttribute("uname");
+	String s=(String)session.getAttribute("uname");
 		List list=(List)cartdao.getAllCartProducts(s);
+		//BigInteger n=cartdao.noOfRows(s);
+		//session.setAttribute("rows", n);
+		//System.out.println(n);
 			return new ModelAndView("cart","cart",list);
 			
 	}
+	
 }

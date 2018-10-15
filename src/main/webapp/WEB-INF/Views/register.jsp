@@ -21,19 +21,19 @@ p.sansserif {
 </head>
 <body>
 
-<div class="container" style="background-color:lavender;">
+<div class="container" style="background-color:rgb(180, 180, 180);">
   <h2>  <p class="sansserif">Registration form</p></h2></p1>
-<p1 class="double">  <sptags:form class="form-horizontal" action="addregister" method="post" commandName="reg">
+<p1 class="double">  <sptags:form name="myform" class="form-horizontal" action="addregister" method="post" commandName="reg" onsubmit="return myFunction()">
 </p1>    <div class="form-inline" >
       <label class="control-label col-sm-2" for="username">UserName:</label>
       <div class="col-sm-10">          
-        <sptags:input path="username" class="form-control" placeholder="username"/>
+        <sptags:input path="username" class="form-control" placeholder="username" name="username" />
       </div>
     </div>
     <div class="form-inline">
       <label class="control-label col-sm-2" for="productImg" >Password:</label>
       <div class="col-sm-10">          
-        <sptags:input type="password" path="password" class="form-control" placeholder="password"/>
+        <sptags:input type="password" path="password" class="form-control" placeholder="password" name="password"/>
       </div>
     </div>
     <div class="form-inline">
@@ -70,6 +70,22 @@ p.sansserif {
       </div>
     </div>
   </sptags:form>
- 
+ <script type="text/javascript">
+ function myFunction()
+ {
+	 var username=document.myform.username.value;
+
+	 if(username.length>6 && password.length>6)
+		 {  
+		return true;
+		 }
+	 else
+		 {
+		 alert("username should have atleast 6 characters");
+		 alert("password is short");
+		 return false;
+		 }
+ }
+ </script>
 </body>
 </html>

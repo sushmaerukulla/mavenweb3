@@ -29,7 +29,6 @@
 
 <div class="container mt-3">
 
-<h2>Carousel</h2>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="200" data-keyboard="true" data-pause="hover" data-wrap="false">
 
  <!-- Indicators -->

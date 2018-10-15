@@ -17,7 +17,7 @@ import com.sushma.web3.model.Supplier;
 @Controller
 public class SupplierController {
 	@Autowired
-SupplierDao supplierdao;
+SupplierDao supplierDao;
 	
 	
 
@@ -26,22 +26,22 @@ SupplierDao supplierdao;
 	public ModelAndView show()
 	{
 		ModelAndView mv=new ModelAndView("supplier","sup",new Supplier());
-		List supList=supplierdao.getAllSuppliers();
+		List supList=supplierDao.getAllSuppliers();
 		mv.addObject("v3",supList);
 		return mv;
 	}
 	@RequestMapping(value="/addSupplier", method=RequestMethod.POST)
 	public ModelAndView insert(@ModelAttribute("sup") Supplier sup)
 	{
-		supplierdao.insert(sup);
-		List supList=supplierdao.getAllSuppliers();
+		supplierDao.insert(sup);
+		List supList=supplierDao.getAllSuppliers();
 		return new ModelAndView("supplier","v3",supList);
 	}
 	@RequestMapping("/deletesup")
-	public ModelAndView delete(@RequestParam("supid") int supid)
+	public ModelAndView m3(@RequestParam("supid") int supid)
 	{
-		supplierdao.deleteSupplier(supid);
-		List supList=supplierdao.getAllSuppliers();
+		supplierDao.deleteSupplier(supid);
+		List supList=supplierDao.getAllSuppliers();
 		ModelAndView mv=new ModelAndView("supplier","sup",new Supplier());
 		mv.addObject("v3",supList);
 		return mv;
