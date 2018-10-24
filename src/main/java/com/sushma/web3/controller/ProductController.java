@@ -62,6 +62,7 @@ SupplierDao supplierdao;
 			BufferedOutputStream bos=new BufferedOutputStream(fos);
 			
 				bos.write(proImg.getBytes());
+				bos.close();
 			} catch (IOException e) {
 			
 			}

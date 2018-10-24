@@ -48,7 +48,8 @@ font-size: 20px
        <jscore:set var="payableAmount" value="${payableAmount+c.totalprice}" />
 
 </jscore:forEach>
-<p>Total Amount to be paid=${payableAmount }</p>
+<p>Total Amount( <% BigInteger r=(BigInteger)session.getAttribute("rows");
+     out.print(r);%> items)=${payableAmount }</p>
    </tbody>
  </table>
 </div>

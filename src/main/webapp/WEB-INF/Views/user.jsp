@@ -4,7 +4,7 @@
 <%@include file="userheader.jsp" %>
 <html lang="en">
 <head>
-   <title>Bootstrap Example</title>
+   <title>just women products</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,12 +22,13 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: hsl(0, 100%, 90%)}
 
 th {
-    background-color: rgb(0, 0, 0);
+    background-color: hsl(0, 40%, 50%);
     color: white;
 }
+
 </style>
 </head>
 <body>
@@ -46,10 +47,10 @@ th {
     <tbody>
      <jscore:forEach items="${product}" var="p">
       <tr>
-        <td><a href="showmoredetails?id=${p.id}"><img src="resources/${p.id }.jpg" width=75px; height=75px>        ${p.proname}
-        ${p.proprice}
-        ${p.procat}
-        ${p.prosup}</td>
+        <td><a href="showmoredetails?id=${p.id}"><img src="resources/${p.id }.jpg" width=140px; height=140px>        ${p.proname}<br>
+        Rs:${p.proprice}<br>
+      	Category:${p.procat}<br>
+        Supplier:${p.prosup}</td>
       </tr>
       </jscore:forEach>
     </tbody>

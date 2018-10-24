@@ -4,7 +4,6 @@
 <%@include file="adminheader.jsp" %>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -101,7 +100,7 @@ p.sansserif {
     </div>
   </sptags:form>
  
-<div class="container"style="background-color:rgb(240, 240, 240)"; >
+<div class="container"style="background-color:hsl(0, 60%, 50%)"; >
      
   <table class="table table-dark table-striped table-bordered">
     <thead>

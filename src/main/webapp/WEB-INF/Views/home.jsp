@@ -43,13 +43,13 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="resources/pic1.jpg" alt="Los Angeles" width="1100" height="500">
+      <img src="resources/pic1.jpg" alt="1" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="resources/pic3.jpg" alt="Chicago" width="1100" height="500">
+      <img src=resources/4639.jpg" alt="2" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="resources/pic2.jpg" alt="New York" width="1100" height="500">
+      <img src="resources/pic2.jpg" alt="3" width="1100" height="500">
     </div>
   </div>
   

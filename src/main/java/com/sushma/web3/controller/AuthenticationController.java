@@ -98,7 +98,7 @@ public String login_session_attributes(HttpSession session,Model model) {
          {
              session.setAttribute("UserLoggedIn", true);
              session.setAttribute("uname", username);
-         page="/home";
+         page="/home2";
              session.setAttribute("test",1);
              String s=(String)session.getAttribute("uname");
          	List list=(List)cartdao.getAllCartProducts(s);

@@ -16,8 +16,9 @@ p.sansserif {
     font-family: Arial, Helvetica, sans-serif;
 }
 p{
-    font-size: 20px;
- 
+    font-size: 17px;
+    font-weight:bold;
+    color:#ffffff;
 }
 
 </style>
@@ -26,14 +27,17 @@ p{
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color:rgb(180, 180, 180);">
+
+<nav class="navbar navbar-default" style="background-color:hsl(0, 100%, 25%)">
   <div class="container-fluid">
     <div class="navbar-header">
      
     </div>
+    <center>
     <ul class="nav navbar-nav">
-     <a class="navbar-brand" href="home.jsp"><p>Home</p></a>
-    <li><a href="user.html"><p>Products</p></a>
+    <li><a href="home2.html"><p>Home</p></a></li>
+    <li><a href="user.html"><p>Products</p></a></li>
+   
          <li> <a href="register.html"><p>SignUp</p></a></li>   
      <li> <a href="login.html"><p>SignIn</p></a></li>   
      <li><a href="perform_logout"><p>Logout</p></a></li> 
@@ -43,7 +47,9 @@ p{
      <li><a href="cart1.html"><img src="resources/download.png" width=50px; height=50px></a></li>   
 
  </ul>
+ </center>
   </div>
 </nav>
+
 </body>
 </html>

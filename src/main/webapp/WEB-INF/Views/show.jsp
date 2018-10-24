@@ -13,24 +13,38 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 20px;
+}
+
+</style>
 </head>
 <body>
-<div>
+<div class="container-fluid">
+<div class="col-sm-6">
+
 <img src="resources/${product.id }.jpg">
-<p>${product.id}</p>
-  ${product.proname}
-  ${product.proprice}
-  <p>Select size:</p>
-  <input type="radio" value="small"  checked>Small
-<input type="radio" value="medium"  >Medium
-<input type="radio" value="large"  >Large
-<form action="addtocart">
+\<form action="addtocart">
 <input type="hidden" name="id" value="${product.id}">
-Quantity<input type="text" name="quantity">
+<p>Enter Quantity:</p><input type="text" name="quantity">
 
 <input type="submit" value="Add to Cart">
 
 </form>
+</div>
+<div class="col-sm-6">
+ <p> ${product.proname}<p><br>
+ <p>Rs:${product.proprice}<p>
+  <p>Select size:</p>
+  <input type="radio" value="small"  checked>Small
+<input type="radio" value="medium"  >Medium
+<input type="radio" value="large"  >Large
+
   </div>
+ </div>
 </body>
 </html>

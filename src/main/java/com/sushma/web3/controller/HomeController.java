@@ -29,6 +29,18 @@ public ModelAndView mappinguser()
 		return mv;
 		
 }
+	@RequestMapping("/home2")
+	public ModelAndView homepage()
+	{
+		
+
+		ModelAndView mv=new  ModelAndView("home2","prod",p1);
+		List proList=pdao.getAllProducts();
+		mv.addObject("product",proList);
+		return mv;
+			
+			
+	}
 	@RequestMapping("/index")
 	public ModelAndView mappingindex()
 	{

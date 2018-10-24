@@ -16,23 +16,11 @@
 <style>
 body
 {
-    background-color: LightGray;
+    background-color: hsl(0, 100%, 90%);
 }
 p1.double {border-style: double;}
 </style>
 
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -60,11 +48,13 @@ p1.double {border-style: double;}
 </div>
 <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button><br>
+         <a href="register.html">Do not have an Account?Click here</a>
       </div>
+      
     </div>
   </form>
 </div>
-   <a href="register.html">New User?Register here</a>
+  
 </body>
 </html>

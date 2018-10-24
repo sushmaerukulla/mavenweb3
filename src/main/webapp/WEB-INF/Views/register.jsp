@@ -16,24 +16,29 @@ p.one {
 p.sansserif {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 </style>
 </head>
 <body>
 
 <div class="container" style="background-color:rgb(180, 180, 180);">
-  <h2>  <p class="sansserif">Registration form</p></h2></p1>
+  <h2>  <p class="sansserif"><p>Registration form</p></p></h2></p1>
 <p1 class="double">  <sptags:form name="myform" class="form-horizontal" action="addregister" method="post" commandName="reg" onsubmit="return myFunction()">
 </p1>    <div class="form-inline" >
-      <label class="control-label col-sm-2" for="username">UserName:</label>
+      <label class="control-label col-sm-2" for="username">Set UserName:</label>
       <div class="col-sm-10">          
         <sptags:input path="username" class="form-control" placeholder="username" name="username" />
       </div>
     </div>
     <div class="form-inline">
-      <label class="control-label col-sm-2" for="productImg" >Password:</label>
+      <label class="control-label col-sm-2" for="productImg" >Set Password:</label>
       <div class="col-sm-10">          
         <sptags:input type="password" path="password" class="form-control" placeholder="password" name="password"/>
+      </div>
+    </div>
+    <div class="form-inline">
+      <label class="control-label col-sm-2" for="productImg" >Confirm Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" path="password" class="form-control" placeholder="password" name="conpassword"/>
       </div>
     </div>
     <div class="form-inline">
@@ -74,8 +79,10 @@ p.sansserif {
  function myFunction()
  {
 	 var username=document.myform.username.value;
+	 var password=document.myform.password.value;
+	 var conpassword=document.myform.conpassword.value;
 
-	 if(username.length>6 && password.length>6)
+	 if(username.length>6 && password.length>6 && password==conpassword)
 		 {  
 		return true;
 		 }
@@ -83,6 +90,7 @@ p.sansserif {
 		 {
 		 alert("username should have atleast 6 characters");
 		 alert("password is short");
+		 alert("check your password")
 		 return false;
 		 }
  }
